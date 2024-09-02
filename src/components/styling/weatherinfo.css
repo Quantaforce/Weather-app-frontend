@@ -1,0 +1,70 @@
+
+.infocard{
+  color:hsl(var(--card-foreground));
+  background: hsl(var(--card));
+  border:2px solid hsl(var(--border));
+  border-radius:10px; 
+  height: 250px;
+  display:flex;
+    flex-direction: column;
+}
+.info-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px ;
+}
+.temp-detail{
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -.7px;
+}
+.temp-unit{
+  font-size:16px;
+  margin-left: -12px;
+  opacity: .4;
+}
+.weather-detail-card-parent{
+  display: flex;
+  flex-direction: column;
+  width:50%;
+}
+.weather-detail-card{
+  flex-grow: 1;
+  display:flex;
+}
+.real-feel{
+  font-size: 18px;
+  margin-top: -12px;
+}
+.wind-info{
+  width:50%;
+}
+.wind-info-line{
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0 6px 0;
+  border-bottom: 2px solid hsl(var(--border));
+}
+.label{
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.value{
+  font-weight: 700;
+}
+.title-container{
+  padding: 10px 10px 12px 20px;
+  border-bottom: 2px solid hsl(var(--border));
+  font-size:14px;
+  font-weight: 700;
+}
+.phrase{
+  font-size:19px;
+  font-weight:700;
+}
+.weather-icon{
+  width:88px;
+  height:88px;
+  margin-right: 12px;
+}
