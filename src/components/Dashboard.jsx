@@ -20,7 +20,6 @@ function Dashboard() {
       headers:headers
     });
     const fres=await res.json();
-    console.log(fres);
     setData(fres);
 
   }

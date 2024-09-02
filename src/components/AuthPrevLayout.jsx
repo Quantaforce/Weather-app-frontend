@@ -6,7 +6,6 @@ export default function ProtectedRoute({children}){
   const navigate=useNavigate();
   const accessToken=true;
   const {user}=useContext(AuthContext);
-  console.log(user);
   useEffect(() => {
     if(user){
       navigate("/");

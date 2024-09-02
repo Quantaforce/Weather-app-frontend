@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form"
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -14,15 +14,17 @@ import { Button } from "./ui/button";
 function Register() {
   const {register,handleSubmit,watch,formState:{errors}}=useForm({});
   const baseUrl= import.meta.env.VITE_BASEURL;
+  const navigate=useNavigate();
   const onSubmit= async (data)=>{
-    console.log(data);
     const v=await fetch(baseUrl+'api/user/signup',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)  
-    })
+    });
+    navigate('/login')
+
   }
  
   const [showPass,setShowPass]=useState(false);
@@ -43,7 +45,7 @@ function Register() {
           </div>
           <Input className="mb-8" type="password" {...register("confirm_password",{
             required:true,
-            validate:(val)=>{console.log(watch('password')); return watch('password')===val || "Password do not match"}
+            validate:(val)=>{return watch('password')===val || "Password do not match"}
           })} placeholder="confirm password" />
           {errors.confirm_password && <p className="text-red-500/100">{errors.confirm_password.message}</p>}
           <Button type="submit " className="mt-2 font-semibold">Sign Up</Button>

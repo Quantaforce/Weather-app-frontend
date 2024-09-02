@@ -10,7 +10,7 @@ import Home from "./pages/home.jsx"
 
 const router=createBrowserRouter([
   {
-      path:'/',
+      path:'/dashboard',
       element:
         /*<Dash></Dash>*/
         <AuthLayout >
@@ -31,7 +31,7 @@ const router=createBrowserRouter([
               </AuthPrevLayout>),
     },
     {
-      path:'home',
+      path:'/',
       element:(<Home/>),
     }
   ,

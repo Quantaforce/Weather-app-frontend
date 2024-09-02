@@ -3,7 +3,6 @@
 import "./styling/weatherinfo.css"
 import { weekday } from "@/constants";
 function Weatherinfo({data}){
-  console.log(data);
   const dataList=data==null ? data2:data;
   const currentDate=new Date(dataList[0].EpochTime*1000);
   const currentDay= weekday[currentDate.getDay()];

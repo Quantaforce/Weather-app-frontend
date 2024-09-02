@@ -13,8 +13,6 @@ const th={"tooltip": {
             "fontSize": 17
         }}};
 const MyResponsiveLine = ({ data ,Base/* see data tab */ }) => {
-    console.log("line data")
-    console.log(data)
     return <ResponsiveLine
         data={data}
         theme={th}

@@ -16,7 +16,7 @@ export default function Header(){
       method:'POST',
       credentials:'include'
     });
-    navigate('login');
+    navigate('/login');
   }
   const {state}=useContext(cityContext);
   return <div>

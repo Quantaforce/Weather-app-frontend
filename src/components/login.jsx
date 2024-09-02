@@ -17,7 +17,7 @@ function Login() {
   const baseUrl= import.meta.env.VITE_BASEURL;
   const navigate = useNavigate();
   if(user)
-    navigate("/",{replace:true});
+    navigate("/dashboard",{replace:true});
   const {register, handleSubmit}=useForm();
   const onSubmint=async (data)=>{
     const response= await fetch(baseUrl+'api/user/login', {
@@ -33,7 +33,7 @@ function Login() {
     localStorage.setItem('accessToken',jsonResponse.accessToken);
     setUser(jsonResponse.accessToken);
     localStorage.setItem('refreshToken',jsonResponse.refreshToken);
-    navigate("/");
+    navigate("/dashboard");
   }
   const [showPass,setShowPass]=useState(false);
   return <div className="h-full flex justify-center items-center ">

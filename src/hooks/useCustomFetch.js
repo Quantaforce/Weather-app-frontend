@@ -24,7 +24,7 @@ const useCustomFetch=()=>{
     if(tokenRes.status==402){
       setUser(null);
       localStorage.removeItem('accessToken')
-      navigate('login')
+      navigate('/login')
     }
     const newtoken=await tokenRes.json();
     localStorage.setItem('accessToken',newtoken.accessToken);

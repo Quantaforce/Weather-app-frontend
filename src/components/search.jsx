@@ -51,7 +51,6 @@ function Search(){
     const url=SUGGESTION_URL+`q=${city}`;
     //const url='api/autocomplete'+`&q=${city}`;
   
-   console.log(url);
     const headers={
       'Content-Type': 'application/json',  
     }
@@ -59,7 +58,6 @@ function Search(){
       headers:headers
     });
     const fres=await res.json();
-    console.log('contet',fres);
     setContent(fres);
     //setContent(suggestions);
     setOpen(true);
@@ -79,7 +77,6 @@ function Search(){
     }
   },[city]);
   function handleChange(e){
-    console.log(e.target.value)
     setCity(e.target.value);
   }
   return (<div className="relative w-72">
