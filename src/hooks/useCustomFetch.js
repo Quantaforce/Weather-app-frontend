@@ -29,7 +29,7 @@ const useCustomFetch=()=>{
     const newtoken=await tokenRes.json();
     localStorage.setItem('accessToken',newtoken.accessToken);
     headers['Authorization']= `Bearer ${newtoken.accessToken}`;
-    const newres=await orignalRequest(url,headers);
+    const newres=await orignalRequest(baseUrl+url,headers);
     return newres;
   }
 
